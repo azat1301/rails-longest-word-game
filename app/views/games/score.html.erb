@@ -1,5 +1,7 @@
 <div class="container">
-<h1>Result</h1>
-  <p><%= @results %></p>
-  <%= link_to "Play again", "new" %>
+<h1 class="mt-5 d-flex justify-content-center">Result</h1>
+  <p class="mt-5 d-flex justify-content-center"><%= @results %></p>
+  <div class="mt-5 d-flex justify-content-center">
+    <%= link_to "Play again", "new", class: "btn btn-outline-info" %>
+  </div>
 </div>

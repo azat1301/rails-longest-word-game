@@ -20,7 +20,7 @@ class GamesController < ApplicationController
     elsif @ingrid && @result["found"] == false
       @results = "Sorry but #{params[:word]} does not seem to be English word..."
     else
-      @results = "Sorry but #{params[:word]} cannot be build out of #{@letters}"
+      @results = "Sorry but #{params[:word]} cannot be build out of #{params[:letters]}"
     end
   end
 end
