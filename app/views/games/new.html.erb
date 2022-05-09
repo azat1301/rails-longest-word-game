@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1>New game</h1>
+    <h4 class="mb-3">Here is your grid:</h4>
+    <p class="d-inline p-2 bg-primary text-white"><%= @letters.join(" ")%></p>
+</div>
+<div class="container mt-5">
+  <form action="score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+    <label for="word">What is your longest word you can find?</label>
+    <input type="text" name="word" value='<%= params[:word] %>'>
+    <button type='submit' class="btn btn-outline-info">Play</button>
+  </form>
+</div>
